@@ -265,6 +265,15 @@ class ConnectionPass extends AbstractPass
 				'user' => Expect::string()->dynamic(),
 				...$shared,
 			])->castTo('array'),
+			'sqlsrv' => Expect::structure([
+				'dbname' => Expect::string()->dynamic(),
+				'driver' => Expect::anyOf('sqlsrv'),
+				'host' => Expect::string()->dynamic(),
+				'password' => Expect::string()->dynamic(),
+				'port' => Expecto::port(),
+				'user' => Expect::string()->dynamic(),
+				...$shared,
+			])->castTo('array'),
 			'ibm_db2' => Expect::structure([
 				'dbname' => Expect::string()->dynamic(),
 				'driver' => Expect::anyOf('ibm_db2'),
