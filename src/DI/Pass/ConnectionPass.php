@@ -224,7 +224,7 @@ class ConnectionPass extends AbstractPass
 				'application_name' => Expect::string()->dynamic(),
 				'charset' => Expect::string()->dynamic(),
 				'dbname' => Expect::string()->dynamic(),
-				'driver' => Expect::anyOf('pdo_pgsql'),
+				'driver' => Expect::anyOf('pgsql'),
 				'gssencmode' => Expect::string()->dynamic(),
 				'host' => Expect::string()->dynamic(),
 				'password' => Expect::string()->dynamic(),
